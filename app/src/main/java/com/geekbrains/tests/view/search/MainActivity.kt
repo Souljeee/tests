@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity(), ViewSearchContract {
 
     private fun setUI() {
         toDetailsActivityButton.setOnClickListener {
-            //startActivity(DetailsActivity.getIntent(this, totalCount))
-            findViewById<TextView>(R.id.resultTextBox).text = findViewById<EditText>(R.id.searchEditText).text
+            startActivity(DetailsActivity.getIntent(this, totalCount))
+            //findViewById<TextView>(R.id.resultTextBox).text = findViewById<EditText>(R.id.searchEditText).text
         }
         setQueryListener()
     }
