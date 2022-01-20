@@ -3,6 +3,8 @@ package com.geekbrains.tests.view.search
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.TextView.OnEditorActionListener
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -32,16 +34,12 @@ class MainActivity : AppCompatActivity(), ViewSearchContract {
 
     private fun setUI() {
         toDetailsActivityButton.setOnClickListener {
-            startActivity(DetailsActivity.getIntent(this, totalCount))
+            //startActivity(DetailsActivity.getIntent(this, totalCount))
+            findViewById<TextView>(R.id.resultTextBox).text = findViewById<EditText>(R.id.searchEditText).text
         }
         setQueryListener()
-        setRecyclerView()
     }
 
-    private fun setRecyclerView() {
-        recyclerView.setHasFixedSize(true)
-        recyclerView.adapter = adapter
-    }
 
     private fun setQueryListener() {
         searchEditText.setOnEditorActionListener(OnEditorActionListener { _, actionId, _ ->
