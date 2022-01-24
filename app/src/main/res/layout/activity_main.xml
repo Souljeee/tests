@@ -32,14 +32,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@id/searchEditText"
-        android:text="@string/to_details" />
+        android:text="@string/to_details"
+        app:layout_constraintTop_toBottomOf="@id/searchEditText" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <TextView
+        android:id="@+id/resultTextBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/toDetailsActivityButton" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/toDetailsActivityButton"
+        tools:layout_editor_absoluteX="0dp"
+        tools:text="fsjhdjhfdsjhdsfjhksdfjh"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_margin = "8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
