@@ -20,6 +20,7 @@ class TestCoroutineRule : TestRule {
             Dispatchers.setMain(testCoroutineDispatcher)
 
             base.evaluate()
+            //test
 
             Dispatchers.resetMain()
             testCoroutineScope.cleanupTestCoroutines()
