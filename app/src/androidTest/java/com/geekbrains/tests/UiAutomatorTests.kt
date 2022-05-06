@@ -56,7 +56,7 @@ class UiAutomatorTests {
             .getChildByText(
                 UiSelector()
                     .className(TextView::class.java.name),
-                "Spotify"
+                "Settings"
             )
 
         settingsApp.clickAndWaitForNewWindow()
